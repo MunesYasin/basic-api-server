@@ -36,7 +36,7 @@ async function createfood(req,res){
 
 async function updatefood(req,res){
     const id =req.params.id
-    const obj = reg.body 
+    const obj = req.body 
     const foundfood = await Food.findOne({where:{id:id}})
     const updatedfood = await foundfood.update(obj)
     res.status(201).json(updatedfood)

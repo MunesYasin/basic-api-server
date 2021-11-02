@@ -12,9 +12,9 @@ const not500 = require('../src/error-handlers/500')
 const logger = require('../src/middleware/logger')
 const clothes = require('./routes/clothes')
 const food = require('./routes/food')
-
-app.use(express.json());
 app.use(logger)
+app.use(express.json());
+
 app.use(clothes)
 app.use(food)
 

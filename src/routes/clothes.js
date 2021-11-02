@@ -29,14 +29,17 @@ async function getOneclothes(req,res){
 
 async function createclothes(req,res){
     const newclothes = req.body
-   
+   console.log('============================')
+   console.log(Clothes)
+   console.log('============================')
+
     const newclothesAdded = await Clothes.create(newclothes);
     res.status(201).json(newclothesAdded)
 }
 
 async function updateclothes(req,res){
     const id =req.params.id
-    const obj = reg.body 
+    const obj = req.body 
     const foundclothes = await Clothes.findOne({where:{id:id}})
     const updatedclothes = await foundclothes.update(obj)
     res.status(201).json(updatedclothes)

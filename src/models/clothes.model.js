@@ -1,8 +1,8 @@
 'use strict'
 
 
-const Clothes = (sequelize , DataTypes)=>{
-    sequelize.define('Clothes',{
+const Clothes = (sequelize , DataTypes)=>sequelize.define('Clothes',{
+    
         nameOfClothes:
         {
             type : DataTypes.STRING ,
@@ -13,6 +13,6 @@ const Clothes = (sequelize , DataTypes)=>{
             type : DataTypes.INTEGER
         }
     })
-}
+
 
 module.exports=Clothes
